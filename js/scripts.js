@@ -7,7 +7,7 @@
 // Scripts
 // 
 
-window.addEventListener('DOMContentLoaded', event => {
+/*window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
@@ -31,4 +31,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-});
+});*/
+
+/* All previous Bootstrap-specific JavaScript has been removed for a clean, custom layout. */
+/* The current layout is handled entirely by styles.css and native browser features. */
