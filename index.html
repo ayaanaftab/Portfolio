@@ -3,37 +3,239 @@
 <head>
     <meta name="google-site-verification" content="Y9CrgGGbLtnHFl9N4qn3xB3A28PefFvET5YrSOjpOCY" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayaan Aftab — 3D Artist & Game Developer</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #1CAAD9; /* Used your link color as the main accent */
+            --color-dark: #111;
+            --color-text: #eee;
+            --color-card-bg: #1a1a1a;
+            --color-shadow: rgba(0, 0, 0, 0.5);
+            --color-text-faded: #ccc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--color-dark);
+            color: var(--color-text);
+            text-align: center;
+            line-height: 1.6;
+            padding-top: 80px; /* Space for the fixed header */
+        }
+
+        /* --- GLOBAL CONTAINERS --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-primary);
+            display: inline-block;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: var(--color-text-faded);
+        }
+
+        /* --- NAVIGATION (Easy-to-Navigate) --- */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.95); /* Slightly transparent background */
+            box-shadow: 0 2px 10px var(--color-shadow);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-weight: 600;
+            color: var(--color-text-faded);
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+        }
+
+        /* --- PROJECT CARDS --- */
+        .projects-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            padding-bottom: 40px;
+        }
+        
+        .project-card {
+            background: var(--color-card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            width: 100%; /* Default to full width on small screens */
+            max-width: 350px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(28, 170, 217, 0.3); /* Accent shadow */
+            border-color: var(--color-primary);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .project-description {
+            font-size: 1em;
+            margin-bottom: 20px;
+            color: var(--color-text-faded);
+            line-height: 1.5;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: #1687b0;
+            color: white;
+        }
+
+        /* --- 3D SHOWCASE --- */
+        .sketchfab-embed-wrapper {
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px var(--color-shadow);
+        }
+
+        iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+        }
+
+        .credit-text {
+            font-size: 0.9rem;
+            color: var(--color-text-faded);
+            margin-top: 8px;
+            padding-bottom: 40px;
+        }
+
+        /* --- RESPONSIVENESS --- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            .nav-content {
+                flex-direction: column;
+                height: auto;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .nav-bar {
+                height: auto;
+            }
+            .logo {
+                margin-bottom: 10px;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+            body {
+                padding-top: 100px; /* Adjust for taller mobile nav */
+            }
+            iframe {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header id="main-nav">
+    <header class="nav-bar">
         <div class="nav-content">
             <span class="logo">Ayaan Aftab</span>
             <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Web Projects</a>
-                <a href="#3d">3D Showcase</a>
+                <a href="#web-apps">Web Apps</a>
+                <a href="#3d-showcase">3D Showcase</a>
             </nav>
         </div>
     </header>
-
-    <main class="container">
-        <section id="about" class="hero-section">
-            <h1 class="name">Ayaan Aftab</h1>
-            <p class="tagline">3D Artist & Game Developer</p>
-            <p class="bio">Passionate about creating immersive visual experiences. I use Blender, Unity, and Flask to bring concepts to life, from low-poly models to responsive web applications.</p>
-            
-            <div class="social-icons">
-                </div>
-        </section>
-
-        <section id="projects" class="projects-section">
-            <h2 class="section-title">Web Applications</h2>
+    
+    <div class="container">
+        <h1>Ayaan Aftab</h1>
+        <p class="tagline">3D Artist & Game Developer</p>
+        <p class="tagline">I create 3D models, games, and web applications using **Blender**, **Unity**, and **Flask**.</p>
+        
+        <section id="web-apps">
+            <h2>Web Applications</h2>
             
             <div class="projects-grid">
                 <div class="project-card">
@@ -42,15 +244,14 @@
                         A Flask web application that provides real-time weather information using METEO weather API. Features clean UI and responsive design.
                     </div>
                     <a href="https://hippiatric-ethical-zenobia.ngrok-free.dev/" class="project-link" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> Visit App
+                        Visit Weather App
                     </a>
                 </div>
-                
-                </div>
+            </div>
         </section>
 
-        <section id="3d" class="showcase-section">
-            <h2 class="section-title">3D Model Showcase</h2>
+        <section id="3d-showcase">
+            <h2>3D Model Showcase</h2>
 
             <div class="sketchfab-embed-wrapper">
                 <iframe title="Low-Poly Car 3D Model" 
@@ -68,15 +269,16 @@
             </div>
 
             <p class="credit-text">
-                <a href="https://sketchfab.com/3d-models/low-poly-car-3d-model-804ea25ff608406fa9b516d7ef6df7e0" target="_blank">View on Sketchfab</a>
+                <a href="https://sketchfab.com/3d-models/low-poly-car-3d-model-804ea25ff608406fa9b516d7ef6df7e0" target="_blank" rel="nofollow">
+                    Low-Poly Car 3D Model
+                </a> by 
+                <a href="https://sketchfab.com/Tickle23" target="_blank" rel="nofollow">
+                    Tickle23
+                </a> on 
+                <a href="https://sketchfab.com" target="_blank" rel="nofollow">Sketchfab</a>
             </p>
         </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Ayaan Aftab. All Rights Reserved.</p>
-    </footer>
+    </div>
 
 </body>
 </html>
