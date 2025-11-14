@@ -1,140 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="Y9CrgGGbLtnHFl9N4qn3xB3A28PefFvET5YrSOjpOCY" />
-  <meta charset="UTF-8">
-  <title>Ayaan Aftab — 3D Artist & Game Developer</title>
-  <style>
-    
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #eee;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    h2 {
-      margin-top: 50px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-    }
-    .sketchfab-embed-wrapper {
-      max-width: 800px;
-      margin: auto;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(255,255,255,0.1);
-    }
-    iframe {
-      width: 100%;
-      height: 480px;
-      border: none;
-    }
-    .credit-text {
-      font-size: 13px;
-      color: #ccc;
-      margin-top: 8px;
-    }
-    .credit-text a {
-      color: #1CAAD9;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .projects-grid {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-    .project-card {
-      background: #1a1a1a;
-      padding: 25px;
-      border-radius: 10px;
-      width: 300px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid #333;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-    .project-title {
-      font-size: 1.4em;
-      margin-bottom: 15px;
-      color: #fff;
-    }
-    .project-description {
-      font-size: 1em;
-      margin-bottom: 20px;
-      color: #ccc;
-      line-height: 1.5;
-    }
-    .project-link {
-      display: inline-block;
-      background: #1CAAD9;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .project-link:hover {
-      background: #1687b0;
-    }
-    .coming-soon {
-      background: #666 !important;
-      cursor: not-allowed;
-    }
-    .coming-soon:hover {
-      background: #666 !important;
-      transform: none !important;
-    }
-  </style>
+    <meta name="google-site-verification" content="Y9CrgGGbLtnHFl9N4qn3xB3A28PefFvET5YrSOjpOCY" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ayaan Aftab — 3D Artist & Game Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-  <h1>Ayaan Aftab — 3D Artist & Game Developer</h1>
-  <p>I create 3D models, games, and web applications using Blender, Unity, and Flask.</p>
+    <header id="main-nav">
+        <div class="nav-content">
+            <span class="logo">Ayaan Aftab</span>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Web Projects</a>
+                <a href="#3d">3D Showcase</a>
+            </nav>
+        </div>
+    </header>
 
-  <h2>Web Applications</h2>
-  
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-title">Weather App</div>
-      <div class="project-description">
-        A Flask web application that provides real-time weather information using METEO weather API. Features clean UI and responsive design.
-      </div>
-      <a href="https://hippiatric-ethical-zenobia.ngrok-free.dev/" class="project-link" target="_blank">Visit Weather App</a>
-    </div>
-      </a>
-    </div>
-    
-    <!-- You can add more project cards here in the future -->
-  </div>
+    <main class="container">
+        <section id="about" class="hero-section">
+            <h1 class="name">Ayaan Aftab</h1>
+            <p class="tagline">3D Artist & Game Developer</p>
+            <p class="bio">Passionate about creating immersive visual experiences. I use Blender, Unity, and Flask to bring concepts to life, from low-poly models to responsive web applications.</p>
+            
+            <div class="social-icons">
+                </div>
+        </section>
 
-  <h2>3D Model Showcase</h2>
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Web Applications</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">Weather App</div>
+                    <div class="project-description">
+                        A Flask web application that provides real-time weather information using METEO weather API. Features clean UI and responsive design.
+                    </div>
+                    <a href="https://hippiatric-ethical-zenobia.ngrok-free.dev/" class="project-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit App
+                    </a>
+                </div>
+                
+                </div>
+        </section>
 
-  <div class="sketchfab-embed-wrapper">
-    <iframe title="Low-Poly Car 3D Model" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/804ea25ff608406fa9b516d7ef6df7e0/embed"> </iframe>
-    <p class="credit-text">
-      <a href="https://sketchfab.com/3d-models/low-poly-car-3d-model-804ea25ff608406fa9b516d7ef6df7e0" target="_blank" rel="nofollow">
-        Low-Poly Car 3D Model
-      </a> by 
-      <a href="https://sketchfab.com/Tickle23" target="_blank" rel="nofollow">
-        Tickle23
-      </a> on 
-      <a href="https://sketchfab.com" target="_blank" rel="nofollow">Sketchfab</a>
-    </p>
-  </div>
+        <section id="3d" class="showcase-section">
+            <h2 class="section-title">3D Model Showcase</h2>
+
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="Low-Poly Car 3D Model" 
+                        frameborder="0" 
+                        allowfullscreen 
+                        mozallowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        allow="autoplay; fullscreen; xr-spatial-tracking" 
+                        xr-spatial-tracking 
+                        execution-while-out-of-viewport 
+                        execution-while-not-rendered 
+                        web-share 
+                        src="https://sketchfab.com/models/804ea25ff608406fa9b516d7ef6df7e0/embed">
+                </iframe>
+            </div>
+
+            <p class="credit-text">
+                <a href="https://sketchfab.com/3d-models/low-poly-car-3d-model-804ea25ff608406fa9b516d7ef6df7e0" target="_blank">View on Sketchfab</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ayaan Aftab. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
