@@ -17,6 +17,10 @@
       font-size: 2.5em;
       margin-bottom: 10px;
     }
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
     p {
       font-size: 1.2em;
       margin-bottom: 40px;
@@ -43,12 +47,79 @@
       font-weight: bold;
       text-decoration: none;
     }
+    .projects-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .project-card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 10px;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #333;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .project-title {
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    .project-description {
+      font-size: 1em;
+      margin-bottom: 20px;
+      color: #ccc;
+      line-height: 1.5;
+    }
+    .project-link {
+      display: inline-block;
+      background: #1CAAD9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .project-link:hover {
+      background: #1687b0;
+    }
+    .coming-soon {
+      background: #666 !important;
+      cursor: not-allowed;
+    }
+    .coming-soon:hover {
+      background: #666 !important;
+      transform: none !important;
+    }
   </style>
 </head>
 <body>
 
   <h1>Ayaan Aftab — 3D Artist & Game Developer</h1>
-  <p>I create 3D models and games using Blender and Unity.</p>
+  <p>I create 3D models, games, and web applications using Blender, Unity, and Flask.</p>
+
+  <h2>Web Applications</h2>
+  
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-title">Weather App</div>
+      <div class="project-description">
+        A Flask web application that provides real-time weather information using METEO weather API. Features clean UI and responsive design.
+      </div>
+      <a href="https://hippiatric-ethical-zenobia.ngrok-free.dev/" class="project-link" target="_blank">Visit Weather App</a>
+    </div>
+      </a>
+    </div>
+    
+    <!-- You can add more project cards here in the future -->
+  </div>
 
   <h2>3D Model Showcase</h2>
 
